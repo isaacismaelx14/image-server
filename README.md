@@ -10,7 +10,7 @@ Upload and compress images to your express server.
 ## Usage
 
 `POST /publish` Send a form with the image. The name should be `image` example: 
-``` 
+``` javascript
 const form = document.getElementById("form");
 const image = form.image;
 formData.append("image", image);
@@ -18,14 +18,14 @@ formData.append("image", image);
 Then send the file to the server.
 
 **Example using fetch:**
-```
+```javascript
 fetch('http://localhost:4000/publish', {
     method: 'POST',
     body: formData
 });
 ``` 
 This request will return the path based on the image. **Example:**
-```
+```javascript
 {
     link: "uploads/1652198664218-test.png.webp"
 }
